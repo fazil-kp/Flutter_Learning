@@ -8,9 +8,7 @@ class CounterApp extends StatefulWidget {
 }
 
 class _CounterAppState extends State<CounterApp> {
-
-  int counter =0;
-
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -30,48 +28,48 @@ class _CounterAppState extends State<CounterApp> {
             color: Colors.white,
             borderRadius: BorderRadius.circular(5.0),
           ),
-
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text("Counter App",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-              Text("$counter ",style: const TextStyle(fontSize: 50,fontWeight: FontWeight.bold),)
+              const Text("Counter App",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              Text("$counter ",
+                  style: const TextStyle(
+                      fontSize: 50, fontWeight: FontWeight.bold)),
             ],
-
           ),
         ),
       ),
-      floatingActionButton:Stack(
+      floatingActionButton: Stack(
         children: [
           Positioned(
             bottom: 16.0,
             right: 16.0,
-            child:  FloatingActionButton(
-            tooltip: "Click Here",
-            child: const Icon(Icons.remove),
-            onPressed: () {
-              setState(() {
-                counter--;
-              });
-            },
-          ),
+            child: FloatingActionButton(
+              tooltip: "Click Here",
+              child: const Icon(Icons.remove),
+              onPressed: () {
+                setState(() {
+                  counter--;
+                });
+              },
+            ),
           ),
           Positioned(
             bottom: 80.0,
             right: 16.0,
-            child:  FloatingActionButton(
-            tooltip: "Click Here",
-            child: const Icon(Icons.add),
-            onPressed: () {
-              setState(() {
-                counter++;
-              });
-            },
-          ),
+            child: FloatingActionButton(
+              tooltip: "Click Here",
+              child: const Icon(Icons.add),
+              onPressed: () {
+                setState(() {
+                  counter++;
+                });
+              },
+            ),
           ),
         ],
-      )
-
+      ),
     );
   }
 }
