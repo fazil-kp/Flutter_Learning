@@ -10,7 +10,6 @@ class CounterApp extends StatefulWidget {
 class _CounterAppState extends State<CounterApp> {
 
   int counter =0;
-  int mul =1;
 
 
   @override
@@ -68,19 +67,8 @@ class _CounterAppState extends State<CounterApp> {
                 counter++;
               });
             },
-          ),),
-          Positioned(
-            bottom: 150.0,
-            right: 16.0,
-            child:  FloatingActionButton(
-              tooltip: "Click Here",
-              child: const Icon(Icons.close),
-              onPressed: () {
-                setState(() {
-                  mul ++;
-                });
-              },
-            ),),
+          ),
+          ),
         ],
       )
 
