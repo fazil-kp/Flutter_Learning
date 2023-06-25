@@ -1,3 +1,4 @@
+import 'package:counterapp/futuraClass/demo.dart';
 import 'package:flutter/material.dart';
 
 class CounterApp extends StatefulWidget {
@@ -10,11 +11,37 @@ class CounterApp extends StatefulWidget {
 class _CounterAppState extends State<CounterApp> {
   int counter = 0;
 
+  counterFunction() {
+    setState(
+      () {
+        counter++;
+      },
+    );
+  }
+
+  decrementFunction() {
+    setState(
+      () {
+        counter--;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[800],
       appBar: AppBar(
+        leading: BackButton(
+          color: Colors.white,
+          onPressed: () {
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (context) => const DemoApp(),
+              ),
+            );
+          },
+        ),
         title: const Text("Counter App"),
         backgroundColor: Colors.grey[900],
         centerTitle: true,
@@ -22,18 +49,18 @@ class _CounterAppState extends State<CounterApp> {
       ),
       body: Center(
         child: Container(
-          height: 250,
+          height: 200,
           width: 200,
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(5.0),
+            borderRadius: BorderRadius.circular(100.0),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text("Counter App",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              Text("$counter ",
+              Text("$counter",
                   style: const TextStyle(
                       fontSize: 50, fontWeight: FontWeight.bold)),
             ],
@@ -46,25 +73,23 @@ class _CounterAppState extends State<CounterApp> {
             bottom: 16.0,
             right: 16.0,
             child: FloatingActionButton(
+              backgroundColor: Colors.red,
               tooltip: "Click Here",
               child: const Icon(Icons.remove),
               onPressed: () {
-                setState(() {
-                  counter--;
-                });
+                decrementFunction();
               },
             ),
           ),
           Positioned(
-            bottom: 80.0,
+            bottom: 100.0,
             right: 16.0,
             child: FloatingActionButton(
+              backgroundColor: Colors.green,
               tooltip: "Click Here",
               child: const Icon(Icons.add),
               onPressed: () {
-                setState(() {
-                  counter++;
-                });
+                counterFunction();
               },
             ),
           ),
