@@ -1,6 +1,7 @@
 import 'package:counterapp/futuraClass/check_box.dart';
 import 'package:counterapp/futuraClass/column_row_container_.dart';
 import 'package:counterapp/futuraClass/demo.dart';
+import 'package:counterapp/futuraClass/json_api.dart';
 import 'package:counterapp/futuraClass/radio_button.dart';
 import 'package:counterapp/futuraClass/shared_preference.dart';
 import 'package:counterapp/futuraClass/stack_radio_button.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: SirSharedPref(),
+      home: BackendJson(),
     );
   }
 }
