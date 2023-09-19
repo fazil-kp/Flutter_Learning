@@ -29,7 +29,7 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Check Box 1"),
+                    const Text("Check Box 1"),
                     Checkbox(
                       value: checkValue1,
                       onChanged: (v) {
@@ -46,7 +46,7 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Check Box 2"),
+                    const Text("Check Box 2"),
                     Checkbox(
                       value: checkValue2,
                       onChanged: (v) {
@@ -63,7 +63,7 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Check Box 3"),
+                    const Text("Check Box 3"),
                     Checkbox(
                       value: checkValue3,
                       onChanged: (v) {
@@ -80,7 +80,7 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Check Box 4"),
+                    const Text("Check Box 4"),
                     Checkbox(
                       value: checkValue4,
                       onChanged: (v) {

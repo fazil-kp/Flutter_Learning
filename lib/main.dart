@@ -5,6 +5,7 @@ import 'package:counterapp/futuraClass/json_api.dart';
 import 'package:counterapp/futuraClass/radio_button.dart';
 import 'package:counterapp/futuraClass/shared_preference.dart';
 import 'package:counterapp/futuraClass/stack_radio_button.dart';
+import 'package:counterapp/futuraClass/web_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'futuraClass/counter_app.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: BackendJson(),
+      home: WebView(),
     );
   }
 }
